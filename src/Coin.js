@@ -10,8 +10,8 @@ const Coin = ({ name, image, symbol, price, volume }) => {
           <p className="coin-symbol">{symbol}</p>
         </div>
         <div className="coin-data">
-          <p className="coin-price">${price}</p>
-          <p className="coin-volume">${volume.toLocaleString()}</p>{" "}
+          <p className="coin-price">Rs {price}</p>
+          <p className="coin-volume">Rs {volume.toLocaleString()}</p>{" "}
           {/* To display the actual commas,in the string */}
         </div>
       </div>
