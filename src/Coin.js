@@ -1,7 +1,15 @@
 import React from "react";
-import './Coin.css'
+import "./Coin.css";
 
-const Coin = ({ name, image, symbol, price, volume, priceChange, marketcap}) => {
+const Coin = ({
+  name,
+  image,
+  symbol,
+  price,
+  volume,
+  priceChange,
+  marketcap,
+}) => {
   return (
     <div className="coin-container">
       <div className="coin-row">
@@ -11,13 +19,8 @@ const Coin = ({ name, image, symbol, price, volume, priceChange, marketcap}) => 
           <p className="coin-symbol">{symbol}</p>
         </div>
         <div className="coin-data">
-          <p className="coin-price">Rs {price.toLocaleString()}</p>
-          <p className="coin-volume">Rs {volume.toLocaleString()}</p>
-          {priceChange < 0 ? (<p className="coin-percent red">{priceChange.toFixed(2)}%</p>) :
-           (<p className="coin-percent green">{priceChange.toFixed(2)}%</p>)}
-           <p className="coin-marketcap">
-            Mkt cap: Rs {marketcap.toLocaleString()}
-           </p>
+          <p className="coin-price">Rs {price}</p>
+          <p className="coin-volume">Rs {volume.toLocaleString()}</p>{" "}
           {/* To display the actual commas,in the string */}
         </div>
       </div>
