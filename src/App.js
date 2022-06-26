@@ -1,20 +1,11 @@
 import React, { useState, useEffect } from "react";
-import {makeStyles} from '@material-ui/core/styles';
 import axios from "axios";
 import "./App.css";
 import Coin from "./Coin";
-import Header from './Header.js'
+
 
 
 function App() {
-  const useStyles = makeStyles(() => ({
-    App: {
-      backgroundColor: "#14161a",
-      color: "white",
-      minHeight: "100vh"
-    }
-  }));
-  const classes= useStyles();
   const [coins, setCoins] = useState([]);
   const [search, setSearch] = useState("");
   useEffect(() => {
@@ -38,9 +29,6 @@ function App() {
   ); /* This is basically used to get the coin we search for */
 
   return (
-    <div className={classes.App}>
-    <Header />
-    
     <div className="coin-app">
       {" "}
       {/* creating our JSX */}
@@ -70,7 +58,7 @@ function App() {
         );
       })}
     </div>
-    </div>
+   
   );
 }
 
