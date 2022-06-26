@@ -28,7 +28,7 @@ const Coin = ({
           )}
 
           <p className='coin-marketcap'>
-            Mkt Cap: ${marketcap.toLocaleString()}
+            Mkt Cap: Rs {marketcap.toLocaleString()}
           </p>
           {/* To display the actual commas,in the string */}
         </div>
